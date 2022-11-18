@@ -1,0 +1,22 @@
+#! /bin/bash
+DGLBACKEND=pytorch python ../../dgl-ke-ogb-lsc/python/dglke/train.py --model_name RotatE \
+--hidden_dim 256 --gamma 12.0 --lr 0.1 -a 1.0 --regularization_coef 1e-9 \
+--valid -adv -de --mix_cpu_gpu --num_proc 8  --num_thread 4 \
+--batch_size 1024 \
+--neg_sample_size 1024 \
+--batch_size_eval 1 \
+--print_on_screen \
+--encoder_model_name concat  \
+--log_interval 1000 \
+--is_eval 0 \
+--save_entity_emb 1 \
+--save_rel_emb 1 \
+--save_mlp 1 \
+--use_mmap 1 \
+--eval_interval 25000 \
+--max_step 10000000 \
+--neg_sample_size_eval 19999 \
+--gpu 0 1 2 3 4 5 6 7 \
+--data_path dataset/ \
+--dataset wikikg90m-v2 \
+--save_path dglke_path/rotate_concat

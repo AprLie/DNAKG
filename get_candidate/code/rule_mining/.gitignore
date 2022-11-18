@@ -1,0 +1,7 @@
+.classpath
+*/target/
+*~
+.project
+.settings/
+bin/
+kb/nb-configuration.xml

@@ -1,0 +1,16 @@
+experimentName: ensemble
+searchSpaceFile: searchspace_sr.json
+trialConcurrency: 5
+maxExperimentDuration: 24h
+maxTrialNumber: 10000
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: maximize
+
+trialCommand:  python3 ../code/manualfeature_getmrr.py  --data_path '../testmanual_smore_rule/'  --nni
+trialCodeDirectory: .
+
+trainingService:
+  platform: local
+  useActiveGpu: false
