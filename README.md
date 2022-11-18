@@ -49,7 +49,7 @@ For all the candidate set, it remove the candidate tail $t_i$ which appear in th
 --path_val_hr				path of the val_hr.npy
 --path_test_hr				path of the test_hr.npy
 --candidate_type			candidate type, choice in ['test', 'valid']
---candidate_path_list		used to append the path of the candidate
+--candidate_path_list		        used to append the path of the candidate
 --combine_can_path			path of the processed and concatenated candidate
 --folder_prev_check			folder used to store some temporary files
 ```
